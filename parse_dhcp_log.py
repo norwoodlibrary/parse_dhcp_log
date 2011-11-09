@@ -1,8 +1,3 @@
-#TODO Use ordered dictionary or something more complex for ordering keys.
-# like grabbing the keys, ordering them, then iterating over them.
-
-#TODO Add comments.
-
 import re, sys
 
 def main(log_name):
@@ -20,8 +15,11 @@ def main(log_name):
             else:
                 result[date] = set([mac_address])
 
-    for date, mac_address_set in result.iteritems():
-        print "%s: %d" % (date, len(mac_address_set))
+    # This uses alphabetical sorting so will only work within a month.
+    dates = result.keys()
+    dates.sort()
+    for date in dates:
+        print "%s: %s" % (date, len(result[date]))
 
 if __name__ == "__main__":
     if len(sys.argv) == 2:

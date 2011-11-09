@@ -18,7 +18,7 @@ def main(log_name):
             if date in result:
                 result[date].add(mac_address)
             else:
-                result[date] = {mac_address}
+                result[date] = set([mac_address])
 
     for date, mac_address_set in result.iteritems():
         print "%s: %d" % (date, len(mac_address_set))

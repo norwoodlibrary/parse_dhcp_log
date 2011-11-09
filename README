@@ -1,0 +1,27 @@
+Script used to parse WiFi logfiles. The script prints unique MAC addresses per day.
+
+A small portion of a logfile looks like this:
+
+Mon, 07 Nov 2011 15:23:53 received REQUEST from CC:52:AF:61:3D:46
+Mon, 07 Nov 2011 15:23:53 sending ACK to 192.168.1.129
+Mon, 07 Nov 2011 15:23:54 received REQUEST from 48:60:BC:D5:D5:01
+Mon, 07 Nov 2011 15:23:54 sending ACK to 192.168.1.100
+Mon, 07 Nov 2011 15:31:28 received DISCOVER from 70:F1:A1:A4:7D:8B
+Mon, 07 Nov 2011 15:31:29 sending OFFER to 255.255.255.255 with 192.168.1.131
+Mon, 07 Nov 2011 15:31:39 received DISCOVER from 70:F1:A1:A4:7D:8B
+Mon, 07 Nov 2011 15:31:41 sending OFFER to 255.255.255.255 with 192.168.1.131
+Mon, 07 Nov 2011 15:31:41 received REQUEST from 70:F1:A1:A4:7D:8B
+Mon, 07 Nov 2011 15:31:41 sending ACK to 255.255.255.255
+Mon, 07 Nov 2011 15:31:59 received DISCOVER from 44:A7:CF:67:98:05
+Mon, 07 Nov 2011 15:32:01 sending OFFER to 255.255.255.255 with 192.168.1.118
+Mon, 07 Nov 2011 15:32:01 received REQUEST from 44:A7:CF:67:98:05
+Mon, 07 Nov 2011 15:32:01 sending ACK to 255.255.255.255
+Mon, 07 Nov 2011 15:36:37 received REQUEST from 00:26:5E:57:C9:8A
+Mon, 07 Nov 2011 15:36:37 sending ACK to 192.168.1.124
+Mon, 07 Nov 2011 15:37:12 received REQUEST from 04:1E:64:C2:3E:4C
+Mon, 07 Nov 2011 15:37:12 sending ACK to 192.168.1.128
+Mon, 07 Nov 2011 15:37:12 received REQUEST from 04:1E:64:C2:3E:4C
+Mon, 07 Nov 2011 15:37:12 sending ACK to 192.168.1.128
+Mon, 07 Nov 2011 15:37:12 received REQUEST from 04:1E:64:C2:3E:4C
+Mon, 07 Nov 2011 15:37:12 sending ACK to 192.168.1.128
+Mon, 07 Nov 2011 15:37:12 received REQUEST from 04:1E:64:C2:3E:4C

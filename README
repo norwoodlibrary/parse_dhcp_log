@@ -1,6 +1,9 @@
 Script used to parse WiFi logfiles. The script prints unique MAC addresses per day.
 
-A small portion of a logfile looks like this:
+Note that this only works within a single month because the dates are sorted
+alphabetically and the total is across all dates.
+
+A small portion of a logfile the script will parse looks like this:
 
 Mon, 07 Nov 2011 15:23:53 received REQUEST from CC:52:AF:61:3D:46
 Mon, 07 Nov 2011 15:23:53 sending ACK to 192.168.1.129

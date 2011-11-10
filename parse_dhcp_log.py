@@ -5,19 +5,22 @@ def main(log_name):
     result = {}
     total = 0
 
+    # Parse the logfile into a dictionary consisting of 
+    # {string date: set MAC_addresses} pairs.
     log = open(log_name)
     for line in log:
         match = re_pattern.match(line)
         if match:
             date, mac_address = match.group(1), match.group(2)
             
+            # If the date is already in the dictionary, add the date to the set. 
             if date in result:
                 result[date].add(mac_address)
+            # Otherwise, create a new set containing this MAC address.
             else:
                 result[date] = set([mac_address])
 
-    # This uses alphabetical sorting so will only work within a month.
-    # It also totals all results without regard to month.
+    # TODO Use dates rather than strings so script works if multiple months are in log.
     dates = result.keys()
     dates.sort()
     for date in dates:

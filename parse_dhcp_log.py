@@ -13,10 +13,10 @@ def main(log_name):
         if match:
             date, mac_address = match.group(1), match.group(2)
             
-            # If the date is already in the dictionary, add the date to the set. 
+            # If the date is already in the dictionary, add the MAC address to the set. 
             if date in result:
                 result[date].add(mac_address)
-            # Otherwise, create a new set containing this MAC address.
+            # Otherwise, create a new date with a set containing this MAC address.
             else:
                 result[date] = set([mac_address])
 
